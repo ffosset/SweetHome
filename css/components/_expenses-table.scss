@@ -79,7 +79,6 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .square:hover{
-  transform: rotateY(180deg);
   cursor: pointer;
 }
 
@@ -102,7 +101,6 @@ input[type='range']::-webkit-slider-thumb {
   width: 100%;
   height: 150px;
   background-color: #144a5c;
-  transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   justify-content: center;

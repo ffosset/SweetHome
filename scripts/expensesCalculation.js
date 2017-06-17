@@ -61,7 +61,7 @@ function writeExpenses(expenses){
 
   // Se añade la librería d3, para utilizar una escala de color
   // que modifique el background-color de acuerdo al gasto
-  var colorScale = d3.scaleLinear().domain([0, 550]).range(['#C9E8EE', '#144a5c']);
+  var colorScale = d3.scaleLinear().domain([0, 550]).range(['#dcedf4', '#0e3340']);
 
   var expensePrefix = ['alimentacion', 'ropa', 'transporte', 'salud',
                    'hogar', 'ensenanza', 'telecomunicacion', 'ahorros',
@@ -81,7 +81,7 @@ function writeExpenses(expenses){
     percentValue.innerHTML = expenses[expensePrefix[i]][1] + '%';
 
     // Añadir las clases de la escala para aplicar los colores por css
-    var color = colorScale(expenses[expensePrefix[i]][0]);
+    var color =  expenses[expensePrefix[i]][0] > 0 ? colorScale(expenses[expensePrefix[i]][0]) : '#E9F2F6';
     d3.select(document.getElementById(auxMoney).parentNode)
       .style('background-color', color);
     d3.select(document.getElementById(auxPercent).parentNode)
@@ -131,3 +131,17 @@ function calculateExpenses(salary, rental) {
   }
   return result;
 }
+
+// Hacer toggle de los divs de los cuadrados (se eliminó el flip de las css)
+
+d3.selectAll('.square')
+  .on('mouseover', function() { 
+    d3.select(this).select('.frontSide').style('visibility', 'hidden') 
+  })
+  .on('mouseout', function() { 
+    d3.select(this).select('.frontSide').style('visibility', 'visible') 
+  });
+
+
+
+
