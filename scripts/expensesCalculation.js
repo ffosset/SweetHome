@@ -59,23 +59,34 @@ function writeExpenses(expenses){
   //dinero y el porcentaje calculados:
   //expenses === resultados{nombre} = [valorNumerico, valorPorcentaje]
 
+  // Se añade la librería d3, para utilizar una escala de color
+  // que modifique el background-color de acuerdo al gasto
+  var colorScale = d3.scaleLinear().domain([0, 550]).range(['#C9E8EE', '#144a5c']);
 
   var expensePrefix = ['alimentacion', 'ropa', 'transporte', 'salud',
                    'hogar', 'ensenanza', 'telecomunicacion', 'ahorros',
                    'bares', 'cultura', 'tabaco', 'otros'];
+
   var moneyValue = null;
   var percentValue = null;
   var auxMoney = null;
   var auxPercent = null;
 
   for (i = 0; i < expensePrefix.length; i++) {
-      auxMoney = expensePrefix[i] + 'MoneyValue';
-      auxPercent = expensePrefix[i] + 'PercentValue';
-      moneyValue = document.getElementById(auxMoney);
-      percentValue = document.getElementById(auxPercent);
-      moneyValue.innerHTML = expenses[expensePrefix[i]][0] + '€';
-      percentValue.innerHTML = expenses[expensePrefix[i]][1] + '%';
-    }
+    auxMoney = expensePrefix[i] + 'MoneyValue';
+    auxPercent = expensePrefix[i] + 'PercentValue';
+    moneyValue = document.getElementById(auxMoney);
+    percentValue = document.getElementById(auxPercent);
+    moneyValue.innerHTML = expenses[expensePrefix[i]][0] + '€';
+    percentValue.innerHTML = expenses[expensePrefix[i]][1] + '%';
+
+    // Añadir las clases de la escala para aplicar los colores por css
+    var color = colorScale(expenses[expensePrefix[i]][0]);
+    d3.select(document.getElementById(auxMoney).parentNode)
+      .style('background-color', color);
+    d3.select(document.getElementById(auxPercent).parentNode)
+      .style('background-color', color);
+  }
 }
 
 function noIdealExpensesPercentCalculation(salary, houseRentPercent){
