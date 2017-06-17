@@ -47,7 +47,7 @@ function dynamicStyle(feature) {
     opacity: 1,
     color: 'white',
     dashArray: '1',
-    fillOpacity: 0.4,
+    fillOpacity: 0.7,
   };
 }
 
@@ -82,18 +82,21 @@ function setByCity(f,l){
 
 
 function popUp(f,l){
-    var out = [];
-		    if (f.properties){
-					out.push("Distrito: "+f.properties['name']);
-					for(key in f.properties){
-							    if (new RegExp(current_year).test(key)){
-										out.push(current_year+" T"+key.slice(-1)+": Precio m² - €"+f.properties[key]);
+  var out = [];
+  if (f.properties){
+		out.push("<span class='district'>" + f.properties['name'] + '</span>');
+    out.push(calculatePercentage(f).toPrecision(2) + '% de tu sueldo.')
+    out.push(f.properties['q20164'] + ' €/m²');
+    
+    
+		// for(key in f.properties){
+	 //    if (new RegExp(current_year).test(key)){
 
-							    }
-
-					}
-		    }
-        l.bindPopup(out.join("<br />"));
+		// 		out.push(current_year+" T"+key.slice(-1)+": Precio m² - €"+f.properties[key]);
+  //     }
+		// }
+  }
+  l.bindPopup(out.join("<br />"));
 
 };
 

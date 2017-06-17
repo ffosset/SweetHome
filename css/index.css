@@ -169,10 +169,6 @@ input[type='range']::-webkit-slider-thumb {
   border-radius: 50%;
   background: #144a5c; }
 
-input.range-one::-webkit-slider-thumb  {
-  background: #ffffff;
-}
-
 .rental-range {
   -webkit-appearance: none;
   width: 100%;
@@ -461,7 +457,7 @@ a.white-author:hover {
   border-bottom: 1px solid #144a5c; }
 
 .item {
-  padding: 30px 0px;
+  padding: 30px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -558,6 +554,13 @@ a.white-author:hover {
 
 .logo-medialab-footer img {
   width: 100%; }
+
+.leaflet-popup-content {
+  font-size: 16px; }
+
+.leaflet-popup-content .district {
+  font-size: 18px;
+  line-height: 2; }
 
 .uppercase {
   text-transform: uppercase; }
