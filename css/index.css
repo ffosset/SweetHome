@@ -270,7 +270,8 @@ input.range-one::-webkit-slider-thumb {
   padding: 50px 0; }
 
 .section-text {
-  width: 650px;
+  max-width: 900px;
+  padding: 0 5em;
   margin: 0 auto; }
 
 .section-one {
@@ -379,7 +380,8 @@ input.range-one::-webkit-slider-thumb {
 
 .info-squares {
   display: flex;
-  margin: 30px 0; }
+  max-width: 900px;
+  margin: 30px auto; }
 
 .square-item {
   width: 50%;
@@ -392,8 +394,9 @@ input.range-one::-webkit-slider-thumb {
   background-color: #fde7be; }
 
 .tableauPlaceholder {
-  width: 180%;
-  margin: 0 -40%; }
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 .section-three {
   background-color: #f6f0ea; }

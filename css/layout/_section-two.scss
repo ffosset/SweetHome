@@ -1,6 +1,7 @@
 .info-squares{
   display: flex;
-  margin: 30px 0;
+  max-width: 900px;
+  margin: 30px auto;
 }
 
 .square-item{
@@ -17,6 +18,7 @@
 }
 
 .tableauPlaceholder {
-	width: 180%;
-	margin: 0 -40%;
+	display: flex;
+  max-width: 1200px;
+	margin: 0 auto;
 }
