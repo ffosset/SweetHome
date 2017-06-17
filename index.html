@@ -9,7 +9,9 @@
     <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/png" href="img/iconos-logos/fav-icon.png" />
-
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/leaflet.css"/>
     <link rel="stylesheet" href="css/leaflet-sidebar.css"/>
@@ -22,14 +24,14 @@
     <meta name="twitter:site" content="@medialab">
     <meta name="twitter:creator" content="@florafosset">
     <meta name="twitter:title" content="Dime cuánto cobras y te diré dónde vivir">
-    <meta name="twitter:description" content="¿Aún es posible alquilar piso en Madrid y Barcelona sin arruinarse? Haz la prueba en http://bit.ly/2s9xFwu">
-    <meta name="twitter:image" content="https://ffosset.github.io/dime-cuanto-cobras/img/img-banco.jpg">
+    <meta name="twitter:description" content="¿Aún es posible alquilar piso en Madrid y Barcelona sin arruinarse? Haz la prueba en http://bit.ly/dimecuantocobras">
+    <meta name="twitter:image" content="https://ffosset.github.io/dime-cuanto-cobras/img/pared-se-alquila.jpg">
 
     <meta property="og:title" content="Dime cuánto cobras y te diré dónde vivir" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://ffosset.github.io/dime-cuanto-cobras/" />
-    <meta property="og:image" content="https://ffosset.github.io/dime-cuanto-cobras/img/img-banco.jpg" />
-    <meta property="og:description" content="¿Aún es posible alquilar piso en Madrid y Barcelona sin arruinarse? Haz la prueba en http://bit.ly/2s9xFwu">
+    <meta property="og:image" content="https://ffosset.github.io/dime-cuanto-cobras/img/pared-se-alquila.jpg" />
+    <meta property="og:description" content="¿Aún es posible alquilar piso en Madrid y Barcelona sin arruinarse? Haz la prueba en http://bit.ly/dimecuantocobras">
 
 
   </head>
@@ -118,7 +120,7 @@
             <label for="cities-selection" class="title-map-selector">¿En qué ciudad quieres vivir?</label>
             <div class="cities-selection">
               <button class="btn-city btn-madrid" type="button" name="button">Madrid</button>
-              <button class="btn-city btn-barcelona btn-focus" type="button" name="button">Barcelona</button>
+              <button class="btn-city btn-barcelona" type="button" name="button">Barcelona</button>
             </div>
 
             <label class="title-home-selector label-form" for="radio-group">¿Quieres vivir sólo o compartir?</label>
@@ -127,12 +129,13 @@
 
             <input id="share" type="radio" name="radio-group"><label for="share" class="home-selector">Compartir</label>
 
-            <label class="label-form" for="range-money">¿Cuánto cobras al mes? <span id="map-salary-value"></span></label>
+            <label class="label-form" for="range-money">¿Cuánto cobras al mes? <br> <span id="map-salary-value"></span></label>
 
-            <input class="range-one" name="range-money" type="range" value="1200" min="600" max="2400" id='map-salary'>
+            <input class="range-one" name="range-money" type="range" value="1200" min="600" max="5000" step="100" id='map-salary'>
 
-            <label class="label-form" for="range-meters">¿Qué tamaño de apartamento quieres? <span id="map-apartment-size-value"></span></label>
-            <input type="range" name="range-meters" value="45" min="10" max="200" id="map-apartment-size">
+
+            <label class="label-form" for="range-meters">¿Qué tamaño de apartamento quieres? <br> <span id="map-apartment-size-value"></span></label>
+            <input type="range" name="range-meters" value="45" min="30" max="200" step="5" id="map-apartment-size">
 
             <label class="label-form" for="range-time">Viaja en el tiempo y observa los cambios</label>
             <input type="range" name="range-time" value="2017" list="tickmarks">
@@ -243,7 +246,7 @@
             <div class="range-selector">
               <div class="salary">
                 <label for="salary-range" class="label-salary-rental">Tu salario mensual neto: <span id="value-salary-range"></span></label>
-                <input id="salary-range" type="range" name="salary-range" min="600" max="3000" value="1200" class="salary-range">
+                <input id="salary-range" type="range" name="salary-range" min="600" max="3000" step="100" value="1200" class="salary-range">
                 <div class="range-slider">
                   <span class="range-slider__value">600</span>
                   <span class="range-slider__value">3000</span>
@@ -252,10 +255,10 @@
 
               <div class="rental">
                 <label for="rental-range" class="label-salary-rental">Lo que gastas en alquiler: <span id="value-rental-range"></span></label>
-                <input id="rental-range"type="range" name="rental-range" min="192" max="1280" value="400" class="rental-range">
+                <input id="rental-range"type="range" name="rental-range" min="200" max="1500" step="20" value="400" class="rental-range">
                 <div class="range-slider">
-                  <span class="range-slider__value">192</span>
-                  <span class="range-slider__value">1280</span>
+                  <span class="range-slider__value">200</span>
+                  <span class="range-slider__value">1500</span>
                 </div>
               </div>
 
