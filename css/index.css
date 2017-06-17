@@ -391,6 +391,10 @@ input.range-one::-webkit-slider-thumb {
 .two-square {
   background-color: #fde7be; }
 
+.tableauPlaceholder {
+  width: 180%;
+  margin: 0 -40%; }
+
 .section-three {
   background-color: #f6f0ea; }
 
