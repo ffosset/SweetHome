@@ -63,7 +63,8 @@ function changeCurrentCity(newcity){
 		    current_city=newcity;
 		    jsonLayer.refresh();
 		    mymap.setView(new L.LatLng(cityLookup[current_city][0], cityLookup[current_city][1]),cityLookup[current_city][2]);
-
+        $('.btn-city').removeClass('btn-focus');
+        $('.btn-' + newcity.toLowerCase()).addClass('btn-focus');
 };
 
 
