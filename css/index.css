@@ -346,7 +346,7 @@ input[type='range']::-webkit-slider-thumb {
   background-color: #f1f8fb; }
 
 .interactive-map-section {
-  width: 900px;
+  width: 100%;
   margin: 0 auto;
   position: relative; }
 
@@ -390,7 +390,7 @@ input[type='range']::-webkit-slider-thumb {
   font-family: sans-serif;
   padding-top: 20px;
   top: 20px;
-  left: 20px;
+  left: 60px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
           box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
   z-index: 998; }
