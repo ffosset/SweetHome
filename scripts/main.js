@@ -1,18 +1,9 @@
-var def_style = {
-  fillColor: '#ffeda0',
-  weight: 2,
-  opacity: 1,
-  color: 'white',
-  dashArray: '1',
-  fillOpacity: 0.8
-};
-
-var mymap;
 var current_city;
 var cityLookup = {
 		    'Madrid':[40.468, -3.76, 11],
 		    'Barcelona':[41.387, 2.10, 11.5]
 };
+var current_year = '2016';
 
 function calculateColor(percentage) {
   if(percentage > 50) {
@@ -31,10 +22,9 @@ function calculateColor(percentage) {
 }
 
 function calculatePercentage(feature) {
-  // totalPrecioApartamento = feature.properties.q20164 x tamaño
   var salary = parseFloat($('#map-salary').val());
   var apartmentSize = parseFloat($('#map-apartment-size').val());
-  var apartmentRent = parseFloat(feature.properties.q20164) * apartmentSize;
+  var apartmentRent = parseFloat(feature.properties['q'+current_year+'4']) * apartmentSize;
   return (apartmentRent / salary)*100;
 }
 
@@ -51,7 +41,6 @@ function dynamicStyle(feature) {
   };
 }
 
-var current_year = '2016';
 var jsonLayer = new L.GeoJSON.AJAX(["data/BarcelonaDistrictsDatosIdealista.geojson", "data/MadridDistrictsDatosIdealista.geojson"],{
   filter: setByCity,
   onEachFeature: popUp,
@@ -86,7 +75,7 @@ function popUp(f,l){
   if (f.properties){
 		out.push("<span class='district'>" + f.properties['name'] + '</span>');
     out.push(calculatePercentage(f).toPrecision(2) + '% de tu sueldo.')
-    out.push(f.properties['q20164'] + ' €/m²');
+    out.push(f.properties['q'+current_year+'4'] + ' €/m²');
     
     
 		// for(key in f.properties){
@@ -155,10 +144,14 @@ $(document).ready(function(){
 
       $('#map-salary-value').html($('#map-salary').val() + ' €');
       $('#map-apartment-size-value').html($('#map-apartment-size').val() + ' m2');
+      $('#map-year-value').html($('#map-year').val());
 
       $('.selection-map input[type="range"]').on('input change', function(){
         $('#map-salary-value').html($('#map-salary').val() + ' €');
         $('#map-apartment-size-value').html($('#map-apartment-size').val() + ' m2');
+        var newYear = $('#map-year').val();
+        $('#map-year-value').html(newYear);
+        changeCurrentYear(newYear);
         changeCurrentCity(current_city);
       });
     });
