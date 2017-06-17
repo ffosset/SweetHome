@@ -111,6 +111,8 @@ $(document).ready(function(){
       mymap = L.map('map');
       mymap.scrollWheelZoom.disable();
 
+      // create cartodb layer
+      var cartoLayer = new L.TileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png');
 
       // create the tile layer with correct attribution
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -120,7 +122,7 @@ $(document).ready(function(){
       });
 
       mymap.setView(new L.LatLng(cityLookup[current_city][0], cityLookup[current_city][1]),cityLookup[current_city][2]);
-      mymap.addLayer(osm);
+      mymap.addLayer(cartoLayer);
 
       mymap.addLayer(jsonLayer);
       // set the zoom limits for the map
