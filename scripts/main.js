@@ -131,6 +131,13 @@ $(document).ready(function(){
 
       changeCurrentCity(current_city);
 
+      $('[data-number]').on('change', function(e){
+        if($('#solo').is(':checked'))
+          $('#question').html('¿Cuánto cobras al mes?');
+        else
+          $('#question').html('¿Cuánto cobráis al mes juntos?');
+      });
+
       $('.btn-madrid').on('click', function(){
         $('.btn-barcelona').removeClass('btn-focus');
         $(this).addClass('btn-focus');
