@@ -13,7 +13,8 @@ body {
 
 .text-hero {
   font-family: "Roboto Condensed", sans-serif;
-  color: white; }
+  color: white;
+  text-shadow: 0 0 40px #000000; }
 
 .title-hero {
   font-size: 60px; }
@@ -238,9 +239,9 @@ input.range-one::-webkit-slider-thumb {
   width: 100%; }
 
 .text-hero {
-  width: 38%;
-  margin-left: 20%;
-  margin-top: 10%; }
+  width: 48%;
+  margin-left: 10%;
+  margin-top: 5%; }
 
 .header {
   width: 100%;
