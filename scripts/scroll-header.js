@@ -7,8 +7,10 @@ function headerFixed() {
     header.style.position = "fixed";
     header.style.top = 0;
     header.style.zIndex = 999;
+    header.style.height = "60px";
   }else{
     header.style.position = "static";
+    header.style.height = "80px";
   }
 }
 
