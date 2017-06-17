@@ -11,7 +11,7 @@ var mymap;
 var current_city;
 var cityLookup = {
 		    'Madrid':[40.45, -3.76, 11],
-		    'Barcelona':[41.38, 2.10, 11.5]
+		    'Barcelona':[41.365, 2.10, 11.5]
 };
 
 function calculateColor(percentage) {
