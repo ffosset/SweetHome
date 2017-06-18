@@ -9,8 +9,15 @@
 .icons-media{
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .icons-media{
+  margin: 0 2rem;
+}
+
 }
 
 .icons-media a{
