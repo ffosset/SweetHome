@@ -23,6 +23,13 @@ body {
 .small-hero {
   font-size: 20px; }
 
+@media only screen and (max-width: 570px) {
+  .title-hero {
+    font-size: 14vw;
+    line-height: 1.2em; }
+
+  .small-hero {
+    font-size: 4vw; } }
 .nav-item {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;

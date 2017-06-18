@@ -17,6 +17,18 @@ body{
   font-size: 20px;
 }
 
+@media only screen and (max-width: 570px) {
+    .title-hero{
+  font-size: 14vw;
+  line-height: 1.2em;
+}
+
+.small-hero{
+  font-size: 4vw;
+}
+
+}
+
 .nav-item{
   font-family: $secondary-typography;
   font-size: 20px;
