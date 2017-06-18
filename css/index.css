@@ -388,7 +388,11 @@ input.range-one::-webkit-slider-thumb {
     width: 100%;
     box-shadow: none;
     left: 0px;
-    top: 0px; } }
+    top: 0px; }
+
+  .leaflet-container {
+    touch-action: none;
+    pointer-events: none; } }
 .text-selection-map {
   display: flex;
   justify-content: center;

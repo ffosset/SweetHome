@@ -63,6 +63,9 @@
   left: 0px;
   top: 0px;
   }
+.leaflet-container { 
+  touch-action: none; 
+  pointer-events: none; } 
 
 }
 
