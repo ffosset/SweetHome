@@ -55,6 +55,11 @@ body {
   font-size: 30px;
   font-family: "Roboto Bold", sans-serif; }
 
+.subtitle-section-city {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: "Roboto Bold", sans-serif; }
+
 .city-quote {
   font-size: 10.5px;
   text-align: center; }
@@ -416,6 +421,7 @@ input.range-one::-webkit-slider-thumb {
 
 .square-item {
   width: 50%;
+  min-width: 350px;
   padding: 20px; }
 
 .one-square {
@@ -429,6 +435,12 @@ input.range-one::-webkit-slider-thumb {
   max-width: 1200px;
   margin: 0 auto; }
 
+@media only screen and (max-width: 700px) {
+  .info-squares {
+    display: inline; }
+
+  .square-item {
+    width: 100%; } }
 .section-three {
   background-color: #f6f0ea; }
 

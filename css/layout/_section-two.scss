@@ -6,6 +6,7 @@
 
 .square-item{
   width: 50%;
+  min-width: 350px;
   padding: 20px;
 }
 
@@ -21,4 +22,16 @@
 	display: flex;
   max-width: 1200px;
 	margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .info-squares {
+    display: inline;
+  }
+
+  .square-item{
+    width: 100%;
+  }
+
 }
