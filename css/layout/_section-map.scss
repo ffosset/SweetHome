@@ -47,10 +47,22 @@
 
 @media only screen and (max-width: 930px) {
 .selection-map{
-    width: 280px;
     left: 1rem;
   }
   }
+
+@media only screen and (max-width: 650px) {
+.leaflet-container{
+  touch-action: none;
+}
+.selection-map{
+  position: relative;
+  width: 100%;
+  box-shadow: none;
+  left: 0px;
+  top: 0px;
+  }
+}
 
 .text-selection-map{
   display: flex;
