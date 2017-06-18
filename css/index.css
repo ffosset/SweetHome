@@ -231,6 +231,12 @@ input.range-one::-webkit-slider-thumb {
   transition: transform 1s;
   transform-style: preserve-3d; }
 
+@media only screen and (max-width: 750px) {
+  .square {
+    width: 33.3%; } }
+@media only screen and (max-width: 550px) {
+  .square {
+    width: 50%; } }
 .square:hover {
   cursor: pointer; }
 
