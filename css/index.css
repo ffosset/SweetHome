@@ -5,7 +5,8 @@ body {
   margin: 0; }
 
 a {
-  text-decoration: none; }
+  color: inherit;
+  text-decoration: underline; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -27,7 +28,8 @@ body {
   font-size: 20px;
   color: black;
   font-weight: 700;
-  transition: color 0.3s; }
+  transition: color 0.1s;
+  text-decoration: none; }
 
 .nav-item:hover {
   color: #f89a14; }
@@ -261,16 +263,12 @@ input.range-one::-webkit-slider-thumb {
   display: flex;
   flex-direction: column; }
 
-/*.hero img{
-  width: 100%;
-}*/
 .text-hero {
   width: 48%;
   margin-left: 10%;
   margin-top: 5%; }
 
 @media only screen and (max-width: 930px) {
-  /* For mobile phones: */
   .hero {
     background-size: 150%;
     height: 100%; }
