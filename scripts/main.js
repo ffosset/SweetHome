@@ -4,6 +4,13 @@ var cityLookup = {
 		    'Barcelona':[41.387, 2.10, 11.5]
 };
 var current_year = '2016';
+var div = L.DomUtil.get('map');
+if (!L.Browser.touch) {
+    L.DomEvent.disableClickPropagation(div);
+    L.DomEvent.on(div, 'mousewheel', L.DomEvent.stopPropagation);
+} else {
+    L.DomEvent.on(div, 'click', L.DomEvent.stopPropagation);
+}
 
 function calculateColor(percentage) {
   if(percentage > 50) {

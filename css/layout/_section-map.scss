@@ -1,3 +1,5 @@
+#map { width: 100%; height: 630px; }
+
 .interactive-map-section{
   width: 100%;
   margin: 0 auto;
@@ -45,6 +47,7 @@
   z-index: 998;
 }
 
+
 @media only screen and (max-width: 930px) {
 .selection-map{
     left: 1rem;
@@ -52,10 +55,7 @@
   }
 
 @media only screen and (max-width: 650px) {
-.leaflet-container{
-  touch-action: none;
-  pointer-events: none;
-}
+
 .selection-map{
   position: relative;
   width: 100%;
@@ -63,6 +63,7 @@
   left: 0px;
   top: 0px;
   }
+
 }
 
 .text-selection-map{
