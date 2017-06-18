@@ -356,6 +356,10 @@ input.range-one::-webkit-slider-thumb {
   box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
   z-index: 998; }
 
+@media only screen and (max-width: 930px) {
+  .selection-map {
+    width: 280px;
+    left: 1rem; } }
 .text-selection-map {
   display: flex;
   justify-content: center;
@@ -424,7 +428,7 @@ input.range-one::-webkit-slider-thumb {
 
 .square-item {
   width: 50%;
-  min-width: 350px;
+  min-width: 320px;
   padding: 20px; }
 
 .one-square {

@@ -45,6 +45,13 @@
   z-index: 998;
 }
 
+@media only screen and (max-width: 930px) {
+.selection-map{
+    width: 280px;
+    left: 1rem;
+  }
+  }
+
 .text-selection-map{
   display: flex;
   justify-content: center;
