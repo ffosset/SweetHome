@@ -56,9 +56,10 @@ body {
   font-family: "Roboto Bold", sans-serif; }
 
 .subtitle-section-city {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: normal;
-  font-family: "Roboto Bold", sans-serif; }
+  font-family: "Roboto Bold", sans-serif;
+  margin-bottom: 15px; }
 
 .city-quote {
   font-size: 10.5px;
