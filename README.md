@@ -25,10 +25,8 @@ El precio del alquiler en Madrid y Barcelona ha crecido en el último año a un 
 
 Estos últimos tres años, el precio del alquiler ha subido de manera fulgurante en las grandes ciudades españolas. El año pasado, se observó en Madrid y Barcelona un aumento del precio alrededor de 10%, alcanzando una media histórica de 17,9€/m2 en la ciudad catalana y 14,2€/m2 en la capital española, según los datos de Idealista.
 
-<a href="https://public.tableau.com/views/PreciosdealquilerenEspaa/Dashboard1?:embed=y&:display_count=yes" target="_blank"><img width="965" alt="evolucion precio alquiler" src="https://cloud.githubusercontent.com/assets/22743273/23960342/03c61cb6-09a8-11e7-95a8-dd7597ca1fac.png"></a>
+<a href="https://public.tableau.com/views/PreciosdealquilerenEspaa/Dashboard1?:embed=y&:display_count=yes" target="_blank"><img width="965" alt="evolucion precio alquiler" src="https://user-images.githubusercontent.com/22743273/27278493-db39e568-54e1-11e7-8109-4529060fabfe.png"></a>
 Fuente de datos: [Informes de precios de Idealista](https://www.idealista.com/informes-precio-vivienda)
-
-
 
 Se puede ver [el gráfico interactivo en Tableau Public](https://public.tableau.com/views/PreciosdealquilerenEspaa/Dashboard1?:embed=y&:display_count=yes)
 
@@ -46,7 +44,7 @@ La [encuesta de estructura salarial](http://www.ine.es/prensa/np977.pdf) del INE
 
 Efectivamente, el salario medio español en 2014 se sitúa en **22.858,17€** mientras que el salario más habitual es solamente de **16.490,8€** anuales. Se puede observar que el salario modal (más frecuente) no ha subido casi desde 2009.
 
-<a href="https://public.tableau.com/views/SalariomodalEspaa/Dashboard1?:embed=y&:display_count=yes" target="_blank"><img width="965" alt="salario modal anual" src="https://cloud.githubusercontent.com/assets/22743273/24717166/d4afc7b6-1a31-11e7-9dd4-bb289bc41714.png"></a>
+<a href="https://public.tableau.com/views/SalariosEspaa/Dashboard1?:embed=y&:display_count=yes" target="_blank"><img width="965" alt="salario modal anual" src="https://user-images.githubusercontent.com/22743273/27278571-0a3af7c6-54e2-11e7-910e-67853fd61cc2.png"></a>
 
 Fuente de datos: [Salario anual medio, mediano, modal, a tiempo completo y a tiempo parcial, por periodo (INE)](http://www.ine.es/jaxiT3/Tabla.htm?t=10882&L=0)
 
@@ -61,11 +59,11 @@ Para más facilidad, la estructura del artículo se está realizando [aquí](htt
 ### Mapa interactivo
 
 Haremos varias preguntas al usuario y el mapa se pintará dependiendo de sus respuestas:
-1. Quieres vivir solo, en pareja, compartiendo?
-2. Cuánto cobra la unidad familiar?
-3. Tienes hijos?
+1. Elige la ciudad
+2. ¿Quieres vivir solo o compartir?
+3. ¿Cuánto cobráis juntos?
 3. Que tamaño de piso quieres?
-4. En qué distrito/barrio quieres vivir?
+4. Observa la evolución por año
 
 El usuario podrá ver el porcentaje del sueldo de la unidad familiar que tendrá que gastar en alquiler en cada barrio (ex: 45% en Malasaña, 25% en Villaverde, etc.) Después, podrá observar la evolución de precios en el mapa cambiando la fecha de búsqueda.
 
