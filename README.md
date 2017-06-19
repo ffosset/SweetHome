@@ -19,16 +19,18 @@
 
 ## Entradilla
 
-¿Tienes amigos que comparten piso, no por gusto sino por necesidad? ¿Conocidos que viven en apartamentos enanos o decadentes? ¿Te parece justo el precio que pagas por tu apartamento? En las grandes ciudades españolas, es cada vez más complicado para un inquilino encontrar un alquiler a la altura de sus posibilidades. Por un lado, el precio de los pisos sube a toda velocidad y por otro, el salario medio se estanca. ¿Cuál es la proporción del sueldo que uno gasta en alquiler hoy en día en grandes metrópolis como Madrid y Barcelona? Respondemos a través del análisis de los precios de alquiler en estas ciudades y del salario medio de los inquilinos.
+El precio del alquiler en Madrid y Barcelona ha crecido en el último año a un ritmo mucho mayor que los salarios, de forma que encontrar vivienda se ha convertido en un arduo desafío. Gentrificación, pisos turísticos, especulación. ¿Qué hay detrás de la subida de los precios?
 
 ## Introducción
 
 Estos últimos tres años, el precio del alquiler ha subido de manera fulgurante en las grandes ciudades españolas. El año pasado, se observó en Madrid y Barcelona un aumento del precio alrededor de 10%, alcanzando una media histórica de 17,9€/m2 en la ciudad catalana y 14,2€/m2 en la capital española, según los datos de Idealista.
 
-<a href="https://public.tableau.com/views/Lasubidadelalquilerenlasgrandesciudadesespaolas/SubidadelalquilerenEspaa?:embed=y&:display_count=yes" target="_blank"><img width="965" alt="evolucion precio alquiler" src="https://cloud.githubusercontent.com/assets/22743273/23960342/03c61cb6-09a8-11e7-95a8-dd7597ca1fac.png"></a>
+<a href="https://public.tableau.com/views/PreciosdealquilerenEspaa/Dashboard1?:embed=y&:display_count=yes" target="_blank"><img width="965" alt="evolucion precio alquiler" src="https://cloud.githubusercontent.com/assets/22743273/23960342/03c61cb6-09a8-11e7-95a8-dd7597ca1fac.png"></a>
 Fuente de datos: [Informes de precios de Idealista](https://www.idealista.com/informes-precio-vivienda)
 
-Se puede ver [el gráfico interactivo en Tableau Public](https://public.tableau.com/profile/flora.fosset#!/vizhome/Lasubidadelalquilerenlasgrandesciudadesespaolas/SubidadelalquilerenEspaa)
+
+
+Se puede ver [el gráfico interactivo en Tableau Public](https://public.tableau.com/views/PreciosdealquilerenEspaa/Dashboard1?:embed=y&:display_count=yes)
 
 ## Fuentes de datos
 
