@@ -3,7 +3,7 @@ var cityLookup = {
 		    'Madrid':[40.468, -3.76, 11],
 		    'Barcelona':[41.387, 2.10, 11.5]
 };
-var current_year = '2016';
+var current_year = '2017';
 
 function calculateColor(percentage) {
   if(percentage > 50) {
