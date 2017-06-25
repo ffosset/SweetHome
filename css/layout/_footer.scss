@@ -55,6 +55,11 @@
   width: 40%;
 }
 
+.role{
+line-height: 0;
+padding-bottom: 20px
+}
+
 .team-link{
   color: white;
   transition: color 0.5s, text-decoration 0.5s;
@@ -67,6 +72,24 @@
 
 .greetings{
   width: 60%;
+}
+
+@media only screen and (max-width: 700px) {
+    .team{
+      width: 100%;
+    }
+    .greetings{
+      width: 100%;
+    }
+    .role{
+      padding-bottom: 0px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+    .member{
+      line-height: 0;
+      display: inline-block;
+    }
 }
 
 .project-logo{
