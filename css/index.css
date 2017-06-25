@@ -647,6 +647,10 @@ a.white-author:hover {
 .team {
   width: 40%; }
 
+.role {
+  line-height: 0;
+  padding-bottom: 20px; }
+
 .team-link {
   color: white;
   transition: color 0.5s, text-decoration 0.5s; }
@@ -658,6 +662,24 @@ a.white-author:hover {
 .greetings {
   width: 60%; }
 
+@media only screen and (max-width: 700px) {
+  .team {
+    width: 100%; }
+
+  .greetings {
+    width: 100%; }
+
+  .role {
+    padding-bottom: 0px;
+    display: inline-block; }
+
+  .member {
+    line-height: 0;
+    display: inline-block;
+    margin-right: 5px; } }
+@media only screen and (max-width: 330px) {
+  .section-text {
+    font-size: 14px; } }
 .project-logo {
   width: 100%;
   display: flex;
