@@ -35,36 +35,36 @@
       <div class="interactive-map-section">
         <div class="selection-map">
           <div class="text-selection-map">
-            <label for="cities-selection" class="title-map-selector">Elige la ciudad</label>
+            <label for="cities-selection" class="title-map-selector">Choose a city</label>
             <div class="cities-selection">
               <button class="btn-city btn-madrid" type="button" name="button">Madrid</button>
               <button class="btn-city btn-barcelona btn-focus" type="button" name="button">Barcelona</button>
             </div>
 
-            <label class="title-home-selector label-form" for="radio-group">¿Quieres vivir solo o compartir?</label>
+            <label class="title-home-selector label-form" for="radio-group">Do you wish to live alone or share an apartment?</label>
 
             <div>
               <div style="float:left; width:20%;">
-                <input data-number id="solo" type="radio" name="radio-group"><label for="solo" class="home-selector">Solo</label>
+                <input data-number id="solo" type="radio" name="radio-group"><label for="solo" class="home-selector">Alone</label>
               </div>
               <div style="float:right; width:60%;">
-                <input data-number id="share" type="radio" name="radio-group"><label for="share" class="home-selector">Compartir</label>
+                <input data-number id="share" type="radio" name="radio-group"><label for="share" class="home-selector">Share</label>
               </div>
             </div>
 
 
-            <label class="label-form" for="range-money"><span id="question">¿Cuánto cobras al mes?</span> <br> <span id="map-salary-value"></span></label>
+            <label class="label-form" for="range-money"><span id="question">¿What is your monthly income?</span> <br> <span id="map-salary-value"></span></label>
 
             <input class="range-one" name="range-money" type="range" value="1200" min="600" max="5000" step="100" id='map-salary'>
 
-            <label class="label-form" for="range-meters">¿Qué tamaño de apartamento quieres? <br> <span id="map-apartment-size-value"></span></label>
+            <label class="label-form" for="range-meters">How big should the flat be? <br> <span id="map-apartment-size-value"></span></label>
             <input class="range-one" type="range" name="range-meters" value="45" min="30" max="200" step="5" id="map-apartment-size">
 
-            <label class="label-form" for="range-time">Observa la evolución de precios por año <br> <span id="map-year-value"></span></label>
+            <label class="label-form" for="range-time">Observe the price evolution by year <br> <span id="map-year-value"></span></label>
             <input class="range-one" type="range" name="range-time" min="2010" max="2017" step="1" value="2017" id="map-year">
 
           </div>
-          <p class="text-percentage">Porcentaje de sueldo dedicado al alquiler:</p>
+          <p class="text-percentage">Percentage of income dedicated to rent:</p>
           <div class="rental-percentage">
             <div class="unit-percentage unit-30">- 30%</div>
             <div class="unit-percentage unit-31">31-35%</div>
@@ -76,7 +76,7 @@
         </div>
         <div id="map">
         </div>
-        <p class="city-quote">Fuente de datos: <a href="https://www.idealista.com/informes-precio-vivienda" target="_blank">Idealista</a>
+        <p class="city-quote">Data source: <a href="https://www.idealista.com/informes-precio-vivienda" target="_blank">Idealista</a>
         </p>
       </div>
     <script src="scripts/leaflet.js"></script>
