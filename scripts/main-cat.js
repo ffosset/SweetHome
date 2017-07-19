@@ -74,7 +74,7 @@ function popUp(f,l){
   var out = [];
   if (f.properties){
 		out.push("<span class='district'>" + f.properties['name'] + '</span>');
-    out.push(calculatePercentage(f).toPrecision(2) + '% de tu sueldo.')
+    out.push(calculatePercentage(f).toPrecision(2) + '% del teu sou.')
     out.push(f.properties['q'+current_year+'4'] + ' €/m²');
 
 
