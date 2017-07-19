@@ -125,7 +125,7 @@ $(document).ready(function(){
 
       $('[data-number]').on('change', function(e){
         if($('#solo').is(':checked'))
-          $('#question').html('What is your monthy income?');
+          $('#question').html('What is your monthly income?');
         else
           $('#question').html('What is your monthtly income together?');
       });
