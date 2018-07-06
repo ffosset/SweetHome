@@ -94,66 +94,59 @@ function popUp(f,l){
 
 
 $(document).ready(function(){
-  $.getJSON("https://jsonip.com/?callback=?", function (data) {
-    var ip = data.ip;
-    $.getJSON("https://freegeoip.net/json/" + ip, function (data) {
-      current_city = data.city;
-      if(current_city !== 'Madrid' && current_city !== 'Barcelona')
-        current_city = 'Madrid';
-      mymap = L.map('map');
-      mymap.scrollWheelZoom.disable();
+  var current_city = 'Barcelona';
+  mymap = L.map('map');
+  mymap.scrollWheelZoom.disable();
 
-      // create cartodb layer
-      var cartoLayer = new L.TileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png');
+  // create cartodb layer
+  var cartoLayer = new L.TileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png');
 
-      // create the tile layer with correct attribution
-      var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        minZoom: 4,
-        maxZoom: 12,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      });
+  // create the tile layer with correct attribution
+  var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    minZoom: 4,
+    maxZoom: 12,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  });
 
-      mymap.setView(new L.LatLng(cityLookup[current_city][0], cityLookup[current_city][1]),cityLookup[current_city][2]);
-      mymap.addLayer(cartoLayer);
+  mymap.setView(new L.LatLng(cityLookup[current_city][0], cityLookup[current_city][1]),cityLookup[current_city][2]);
+  mymap.addLayer(cartoLayer);
 
-      mymap.addLayer(jsonLayer);
-      // set the zoom limits for the map
-      mymap.options.maxZoom = 15;
-      mymap.options.minZoom = 6;
+  mymap.addLayer(jsonLayer);
+  // set the zoom limits for the map
+  mymap.options.maxZoom = 15;
+  mymap.options.minZoom = 6;
 
-      changeCurrentCity(current_city);
+  changeCurrentCity(current_city);
 
-      $('[data-number]').on('change', function(e){
-        if($('#solo').is(':checked'))
-          $('#question').html('Quant cobres al mes?');
-        else
-          $('#question').html('Quant cobreu junts al mes?');
-      });
+  $('[data-number]').on('change', function(e){
+    if($('#solo').is(':checked'))
+      $('#question').html('Quant cobres al mes?');
+    else
+      $('#question').html('Quant cobreu junts al mes?');
+  });
 
-      $('.btn-madrid').on('click', function(){
-        $('.btn-barcelona').removeClass('btn-focus');
-        $(this).addClass('btn-focus');
-        changeCurrentCity('Madrid');
-      });
+  $('.btn-madrid').on('click', function(){
+    $('.btn-barcelona').removeClass('btn-focus');
+    $(this).addClass('btn-focus');
+    changeCurrentCity('Madrid');
+  });
 
-      $('.btn-barcelona').on('click', function(){
-        $('.btn-madrid').removeClass('btn-focus');
-        $(this).addClass('btn-focus');
-        changeCurrentCity('Barcelona');
-      });
+  $('.btn-barcelona').on('click', function(){
+    $('.btn-madrid').removeClass('btn-focus');
+    $(this).addClass('btn-focus');
+    changeCurrentCity('Barcelona');
+  });
 
-      $('#map-salary-value').html($('#map-salary').val() + ' €');
-      $('#map-apartment-size-value').html($('#map-apartment-size').val() + ' m2');
-      $('#map-year-value').html($('#map-year').val());
+  $('#map-salary-value').html($('#map-salary').val() + ' €');
+  $('#map-apartment-size-value').html($('#map-apartment-size').val() + ' m2');
+  $('#map-year-value').html($('#map-year').val());
 
-      $('.selection-map input[type="range"]').on('input change', function(){
-        $('#map-salary-value').html($('#map-salary').val() + ' €');
-        $('#map-apartment-size-value').html($('#map-apartment-size').val() + ' m2');
-        var newYear = $('#map-year').val();
-        $('#map-year-value').html(newYear);
-        changeCurrentYear(newYear);
-        changeCurrentCity(current_city);
-      });
-    });
+  $('.selection-map input[type="range"]').on('input change', function(){
+    $('#map-salary-value').html($('#map-salary').val() + ' €');
+    $('#map-apartment-size-value').html($('#map-apartment-size').val() + ' m2');
+    var newYear = $('#map-year').val();
+    $('#map-year-value').html(newYear);
+    changeCurrentYear(newYear);
+    changeCurrentCity(current_city);
   });
 });
